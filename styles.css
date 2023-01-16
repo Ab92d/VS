@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css?family=Aref+Ruqaa');
+@import url('https://fonts.googleapis.com/css?family=Ballet');
+
+    {
+    margin:0
+    }
+    
+    /* importing the aref Ruqaa and ballet font */
+    
+/* reset margin*/
+
+    /* height sets the dimensions of the page */
+    html,
+    body {
+        height: 100%;
+        font-family: "Constantia";
+        background-color: white;
+    }
+    /* set the margin for paragraphs. Each values corresponds to: top, right, bottom, left  */
+    p{
+        margin: 0.5em 0 0.5em 0 ;
+    }
+    
+    header{
+        display: block;
+        /* fixes the nav bar to to the top of the page even when user scrolls */
+        position: fixed;
+        /* fixes the nav bar at the very top and very left of the window */
+        top: 0;
+        left: 0;
+        /* sets the nav bar to 100% width of window*/
+        width: 100%;
+        
+        background-color: #F2D98D;
+        padding: 10px;
+    }
+    
+    /* sets the color of the links on the window and after the links have been clicked */
+    nav a:visited,
+    nav a:link {
+        color: darkred;
+        /* gets rid of the line under the links*/
+        text-decoration: none;
+    }
+    /* gets rid of bullet points on list and gets rid of space inbetween*/
+    nav > ul {
+        display: inline;
+        padding: 0;
+    }
+    /* puts the links in the nav bar next to each other*/
+    nav > ul > li {
+        /* inline puts the links next to each other,but block means you can
+        still have control over width, marin, padding... */
+        display: inline-block;
+        /* tells the browser to not interpret this item as a list item  */
+        list-style: none;
+        margin: 0 5px 0 5px;
+    }
+    
+    /* adds an image to the background*/
+    main {
+        display: block;
+        
+        /* another way to adjust dimensions of an object */
+        padding-top: 3em;
+        padding-bottom: 3em;
+        min-height: 85%;
+    }
+    
+    /* affects the nav bar at the bottom of the page*/
+    footer{
+        padding: 15px; /* this is fixed */
+    }
+    
+    /* gives the image, named aside in index page, a padding
+    in this case its the logo */
+    aside,
+    article {
+        padding: 2em;  /* creates size based off the current font size */
+    }                   /* em is proportional value, changes to create flexible layouts */
+    
+    /* Centre an image within a container. Now, when the website is on a phone the logo stacks
+    above the main image. But when its in full desktop size it is next to teh image.
+    NOT WORKING FOR ME RN! */
+    aside {
+        text-align: center;
+    }
+    
+    /* ensures content doesn't stretch too far across page*/
+    article {
+        width: 75%;
+    }
+    
+    /* targets desktop viewing*/
+    @media only screen and (min-width: 768px) {
+        /* creates two columns*/
+        main {
+            display: flex;
+        }
+        /* want to logo to pull away from left side of screen a little bit*/
+        aside {
+            margin-left: 2%;
+        }
+    }
+    
+    div {
+        background-color: beige;
+        color: rgb(112, 166, 104);
+        width: 100%;
+
+    }
+    
+    
+    
+    
+    /* text Styling */
+
+    /* title */
+    h1 {
+        color: #D96055;
+        font-size: 20px;
+        text-align: center;
+        padding:20px;
+        margin-bottom: 0.2em;
+        margin-top: 0.2em;
+    
+    }
+    /* also title */
+    h2 {
+        color: #D96055 ;
+        font-family: "Ballet", "Brush Script MT";
+        font: 400;
+        font-size: 63px;
+        margin-bottom: 0.1em;
+        margin-top: 0.1em;
+        
+    
+    
+    }
+
+    
+
+    /*Container styling */
+
+    /* /header */
+    .logo-container {
+        width:100%;  /* makes conatienr length of webpage */
+        background-color: #F2D98D;
+        font-family: "Aref Ruqaa", "Brush Script MT";
+        display: flex; /* makes the larger container a flex container */
+        justify-content: center; /* centers the container horizontally */
+        
+    }
+
+    /* container containing title */
+    .title-container{
+    /* sets size of container    */
+    width: 300px;
+    height:200px;
+    line-height: 0px;/* reduces space between lines */
+    padding:10px;/* adds space between text and top of the container */
+    background-color: #F2D98D;
+    }
+    
+    /* invisible container */
+    .image-container {
+        /* container created to allow logo to be positoned
+        on top left of title container */
+        width: 300px;
+        height:200px;
+        background-color: #F2D98D;
+    }
+
+  
+    /* Image Styling */
+
+    /* logo */
+    .logo-container img{
+    /* sets size for logo */
+    width: 150px;
+    height: 140px;
+    /* sets position    */
+    position: absolute;
+    top: 0;
+    
+    }   
+
+    
+    
+  
