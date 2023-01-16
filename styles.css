@@ -20,19 +20,18 @@
     p{
         margin: 0.5em 0 0.5em 0 ;
     }
-    
+    /* styling nav bar */
     header{
         display: block;
-        /* fixes the nav bar to to the top of the page even when user scrolls */
-        position: fixed;
-        /* fixes the nav bar at the very top and very left of the window */
-        top: 0;
-        left: 0;
-        /* sets the nav bar to 100% width of window*/
-        width: 100%;
-        
+        position: fixed; /* fixes the nav bar to to the top of the page even when user scrolls */
+        /* centres nav bar */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        width: 100%; /* sets the nav bar to 100% width of window*/
         background-color: #F2D98D;
-        padding: 10px;
+        
     }
     
     /* sets the color of the links on the window and after the links have been clicked */
@@ -60,7 +59,7 @@
     /* adds an image to the background*/
     main {
         display: block;
-        
+    
         /* another way to adjust dimensions of an object */
         padding-top: 3em;
         padding-bottom: 3em;
@@ -117,7 +116,7 @@
 
     /* title */
     h1 {
-        color: #D96055;
+        color: #7E8C61;
         font-size: 20px;
         text-align: center;
         padding:20px;
@@ -127,7 +126,7 @@
     }
     /* also title */
     h2 {
-        color: #D96055 ;
+        color: #7E8C61;
         font-family: "Ballet", "Brush Script MT";
         font: 400;
         font-size: 63px;
@@ -142,24 +141,29 @@
 
     /*Container styling */
 
-    /* /header */
+    /* / yellow box in header */
     .logo-container {
-        width:100%;  /* makes conatienr length of webpage */
-        background-color: #F2D98D;
+        width:100%;  /* makes container length of webpage */
+        height: 150px;
+        background-color: #F2CDA0;
         font-family: "Aref Ruqaa", "Brush Script MT";
         display: flex; /* makes the larger container a flex container */
         justify-content: center; /* centers the container horizontally */
-        
+    }
+    /* grey bpx in header */
+    header{
+        background-color: #F2A679;
+        height: 170px;
     }
 
     /* container containing title */
     .title-container{
     /* sets size of container    */
     width: 300px;
-    height:200px;
+    height:100px;
     line-height: 0px;/* reduces space between lines */
     padding:10px;/* adds space between text and top of the container */
-    background-color: #F2D98D;
+    background-color: #F2CDA0;
     }
     
     /* invisible container */
@@ -167,8 +171,8 @@
         /* container created to allow logo to be positoned
         on top left of title container */
         width: 300px;
-        height:200px;
-        background-color: #F2D98D;
+        height:100px;
+        background-color: #F2CDA0
     }
 
   
