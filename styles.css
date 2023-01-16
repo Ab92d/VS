@@ -1,13 +1,12 @@
+/* importing the aref Ruqaa and ballet font */
 @import url('https://fonts.googleapis.com/css?family=Aref+Ruqaa');
 @import url('https://fonts.googleapis.com/css?family=Ballet');
+@import url('https://fonts.googleapis.com/css?family=Caudex');
 
-    {
-    margin:0
-    }
-    
-    /* importing the aref Ruqaa and ballet font */
-    
 /* reset margin*/
+body, html {
+    margin: 0; 
+  }
 
     /* height sets the dimensions of the page */
     html,
@@ -20,20 +19,22 @@
     p{
         margin: 0.5em 0 0.5em 0 ;
     }
+    
+    /* grey box in header */
     /* styling nav bar */
-    header{
-        display: block;
-        position: fixed; /* fixes the nav bar to to the top of the page even when user scrolls */
+    header > nav{
         /* centres nav bar */
         display: flex;
         flex-direction: column;
         align-items: center;
         position: relative;
         width: 100%; /* sets the nav bar to 100% width of window*/
-        background-color: #F2D98D;
-        
+        background-color: #F2A679;
+        height: 50px;
     }
+
     
+
     /* sets the color of the links on the window and after the links have been clicked */
     nav a:visited,
     nav a:link {
@@ -127,21 +128,24 @@
     /* also title */
     h2 {
         color: #7E8C61;
+        /* sets font and back up font */
         font-family: "Ballet", "Brush Script MT";
         font: 400;
         font-size: 63px;
         margin-bottom: 0.1em;
         margin-top: 0.1em;
-        
-    
-    
+    }
+
+    /* menu header */
+    h3{
+        font-family: "Caudex", "Brush Script MT";
     }
 
     
 
     /*Container styling */
 
-    /* / yellow box in header */
+    /* / beige box in header */
     .logo-container {
         width:100%;  /* makes container length of webpage */
         height: 150px;
@@ -149,12 +153,9 @@
         font-family: "Aref Ruqaa", "Brush Script MT";
         display: flex; /* makes the larger container a flex container */
         justify-content: center; /* centers the container horizontally */
+        padding-top: 60px;
     }
-    /* grey bpx in header */
-    header{
-        background-color: #F2A679;
-        height: 170px;
-    }
+   
 
     /* container containing title */
     .title-container{
@@ -175,17 +176,24 @@
         background-color: #F2CDA0
     }
 
+    /* fixed nav bar to the top of page when user is scrolling */
+    .nav-container {
+    position: fixed; /* Fix the position of the element */
+    z-index: 1; /* Make sure the element is on top of other elements */
+    top: 0;
+}
+
   
     /* Image Styling */
 
     /* logo */
     .logo-container img{
     /* sets size for logo */
-    width: 150px;
-    height: 140px;
+    width: 140px;
+    height: 130px;
     /* sets position    */
     position: absolute;
-    top: 0;
+    top:7%;
     
     }   
 
