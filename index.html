@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+    <link href='https://fonts.googleapis.com/css2?family=Open+Sans&display=swap' rel='stylesheet'>
 <head>
     <title>HomePage and Menu</title>
-    <link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa" rel='stylesheet'>
-    <link href=<link href='https://fonts.googleapis.com/css?family=Ballet' rel='stylesheet'>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
@@ -27,57 +26,67 @@
             <h1>&nbsp;&nbsp;It's a <h2 class="Wonderful">&nbsp;&nbsp;Wonderful </h2> <h1>&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Slice </h1></h1>
+                
        </div>
         
         
     </div>
-        <nav class="nav-container">
-            <ul class="nav"> 
-                <li><a href="">Sides</a></li>
-                <li><a href="">Dessert</a></li>
-                <li><a href="">Drinks</a></li>
-                <li><a href="">Sauce</a></li>
+        <nav class="nav-container" id="nav-container">
+            <ul class="nav" id="nav"> 
+                <li><a href="#" id="L" class="nav-link">Sides</a></li>
+                <li><a href="#"  class="nav-link">Drinks</a></li>
+                <li><a href="#"  class="nav-link">Dessert</a></li>
+                <li><a href="#"  class="nav-link">Sauce</a></li>
+                <button id="click-me" class="shoppingbasket" onclick="redirect()">
+                    <img src="images/shoppingbasket.png" alt="shoppingbasketimage">
+                </button>
             </ul>
+            
         </nav>
     </header>
     <!-- Primary content for the page -->
 <main>
     <div class="banner-container">
+        <img src="Images/pizzaMainMenu.png" class = "banner" alt = "pizza banner" />
         <!-- sets the heading above the image -->
         <p>Menu</p>
         <!-- banner image -->
-        <img src="Images/pizzaMainMenu.png" class = "banner" alt = "pizza banner" />
         
+        
+        <div class="grid">
+            <div class="popup" onclick="myFunction()">Click me!
+                <img class="grid-item" src="Images/pizzaMainMenu/american_hot.webp">
+                <span class="popuptext" id="myPopup">Popup text...</span>
+              </div>
+            <div class="popup" onclick="myFunction()">Click me!
+                <img class="grid-item" src="Images/pizzaMainMenu/american_hot.webp">
+                    <span class="popuptext" id="myPopup">Popup text...</span>
+                  </div>
+            <img class="grid-item" src="Images/pizzaMainMenu/chicken_feast.webp">
+            <img class="grid-item" src="Images/pizzaMainMenu/chicken_feast.webp">
+            <img class="grid-item" src="Images/pizzaMainMenu/chicken_feast.webp">
+            <img class="grid-item" src="Images/pizzaMainMenu/chicken_feast.webp">
+            <img class="grid-item" src="Images/pizzaMainMenu/chicken_feast.webp">
+            <img class="grid-item" src="Images/pizzaMainMenu/chicken_feast.webp">
+            <img class="grid-item" src="Images/pizzaMainMenu/chicken_feast.webp">
+            <img class="grid-item" src="Images/pizzaMainMenu/chicken_feast.webp">
+            <img class="grid-item" src="Images/pizzaMainMenu/chicken_feast.webp">
+            <img class="grid-item" src="Images/pizzaMainMenu/chicken_feast.webp">
+            <img class="grid-item" src="Images/pizzaMainMenu/chicken_feast.webp">
+            <img class="grid-item" src="Images/pizzaMainMenu/chicken_feast.webp">
+            <img class="grid-item" src="Images/pizzaMainMenu/chicken_feast.webp">
+        </div>
+        <div class="popup" onclick="myFunction()">Click me!
+            <span class="popuptext" id="myPopup">Popup text...</span>
+          </div>
     
 </div>
-   
-        
-        <!-- main title for page. Search engines will key in on this element-->
-        
-   
-    <p>
-      
-
-
-
-
-
-
-    </p>
-        <!-- <h1> It's a Wonderful Slice </h1>
-        <p class ="sub-title">
-            allergy message
-            Have an Allergy? Our food is freshly prepared 
-            instore so we cannot guarantee that any product is free from allergens due to the risk of cross contamination.
-            Take a moment to
-            
-        </p> -->
-    
 </main>
 
 <h1 class = "heading">Pizza Content</h1>
+
     <p>C
-      
+    
     </p>
     <div class="image" id="image1">
         <h2>Pepperoni</h2>
@@ -101,28 +110,28 @@
 <footer >
     <nav >
         <ul>
-                <li><a href="">Sides</a></li>
-                <li><a href="">Dessert</a></li>
-                <li><a href="">Drinks</a></li>
-                <li><a href="">Sauce</a></li>
-                 
-        </ul>
-    </nav>
+            <li><a href="">Sides</a></li>
+            <li><a href="">Dessert</a></li>
+            <li><a href="">Drinks</a></li>
+            <li><a href="">Sauce</a></li>
+        </ul>    
+    </nav > 
     <!-- links to dominos socials -->
-    <div class="socialIcons">
-        <a href="https://twitter.com/dominos_uk">
-            <img src="Images/socials/twitter.png" width=30px >
-        <a href="https://www.facebook.com/DominosPizza/">
-            <img src="Images/socials/facebook.png" width=30px >
-        <a href="https://www.instagram.com/dominos_uk/">
-            <img src="Images/socials/instagram.png" width=20px >    
-        <a href="https://www.tiktok.com/@dominos">
-            <img src="Images/socials/tiktok1.png" width=20px >     
-        </a>
-        
-</div>
+    <ul class="socialIcons">
+        <li><a href="https://twitter.com/dominos_uk" class = "icon">
+            <img src="Images/socials/twitter.png"  width=30px ></a></li>
+        <li><a href="https://www.facebook.com/DominosPizza/" class = "icon">
+            <img src="Images/socials/facebook.png"  width=30px ></a></li>
+        <li><a href="https://www.instagram.com/dominos_uk/" class = "icon" >
+            <img src="Images/socials/instagram.png"width=20px ></a></li>    
+        <li><a href="https://www.tiktok.com/@dominos" class = "icon">
+            <img src="Images/socials/tiktok1.png"  width=20px ></a></li>   
+    </ul>
+    
 <p> Copyright 2023</p> 
 
 </footer>
+<!--links to java index doc -->
+<script src="index.js" type="text/javascript" ></script>
 </body>
 </html>
