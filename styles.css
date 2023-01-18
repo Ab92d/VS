@@ -53,10 +53,38 @@ body, html {
         /* inline puts the links next to each other,but block means you can
         still have control over width, marin, padding... */
         display: inline-block;
-        /* tells the browser to not interpret this item as a list item  */
-        list-style: none;
-        margin: 0 20px 0 20px;
+        list-style: none;/* tells the browser to not interpret this item as a list item  */
+        margin: 0 35px 0 35px;
     }
+
+    nav > ul > button{
+        float: right; 
+        position: absolute; 
+        top: 0; 
+        right: 0; 
+        width: 60px; 
+        height: 50px;
+        background-color: #F2A679;
+        border: #F2A679;
+        
+        
+    }
+
+    nav > ul > button > img{
+        object-fit: contain; 
+        width: 50%; 
+        height: 50%;
+        object-fit: cover; 
+        width: 100%; 
+        height: 100%;
+    
+        
+    }
+
+
+   
+
+
     
     
     /* adds an image to the background*/
@@ -193,6 +221,7 @@ body, html {
     position: fixed; /* Fix the position of the element */
     z-index: 1; /* Make sure the element is on top of other elements */
     top: 0;
+    z-index: 12;
 }
      /* logo */
     .logo-container img{
@@ -207,36 +236,144 @@ body, html {
     .banner-container > p{
         text-align: center;
         font-family: "Caudex", "Brush Script MT";
-        font-size: 50px;
+        font-size: 60px;
+        z-index: 10;
+        font-weight: bold;
+        color: black;
+        
+    }
+
+    .banner-container{
+        z-index: 5;                /*sets the index of banner so components can overlap it and some cant */
+        
+        
     }
     /* facebook, twitter, instagram and tiktok social icons in footer */
     .socialIcons{
-        display: inline-block; /*alines icons horizontally*/
-        text-align: center;
         background-color: #F2A679;
+        padding: 0;
+        list-style: none; /*removed bullet point */
+        margin: 0 35px 0 35px;
+        display: flex;  /*displays icons horizontrally  */
+        align-items: center;
         
     }
-
-   
-  
-    
-
-   
-    
-
     /* pizza banner image */
     .banner {
-        width: 100%; 
+        width: 100%;
+        max-width: 100%;
         position: absolute; /* positions the image relative to the header */
         left: 0; /* aligns the left side of the image with the left side of the header */
-        
-       
-        left: 0;
         right: 0;
-        
-        
+        z-index: -1;
     }
 
+
+    .animate {
+        animation: pulse 1s infinite;
+      }
+      
+     @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .grid{
+        display: flex;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:100%;
+        
+      }
+      .grid-item{
+        width: 20%;
+        padding: 10px;
+
+      }
+
+    /* Popup container */
+    .popup {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+    
+    /* The actual popup (appears on top) */
+    .popup .popuptext {
+      visibility: hidden;
+      width: 900px;
+      height: 900px;
+      background-color: #555;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 8px 0;
+      position: absolute;
+      z-index: 4;
+      /* bottom: 125%; */
+      left: 50%;
+      
+    }
+    
+    /* Popup arrow */
+    .popup .popuptext::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #555 transparent transparent transparent;
+    }
+    
+    /* Toggle this class when clicking on the popup container (hide and show the popup) */
+    .popup .show {
+      visibility: visible;
+      -webkit-animation: fadeIn 1s;
+      animation: fadeIn 1s
+    }
+    
+    /* Add animation (fade in the popup) */
+    @-webkit-keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity:1 ;}
+    }
+    
+
+    
+
+   
+
+   
+
+
+    
+
+
+
+
+      
     
     
+  
+
+
+
+   
+      
   
