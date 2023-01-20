@@ -130,16 +130,16 @@ body, html {
   
     
     /* targets desktop viewing*/
-    @media only screen and (min-width: 768px) {
+    /* @media only screen and (min-width: 768px) { */
         /* creates two columns*/
-        main {
-            display: flex;
-        }
+        /* main { */
+            /* display: flex; */
+        /* } */
         /* want to logo to pull away from left side of screen a little bit*/
-        aside {
-            margin-left: 2%;
-        }
-    }
+        /* aside { */
+            /* margin-left: 2%; */
+        /* } */
+    /* } */
     
     div {
         background-color: beige;
@@ -219,7 +219,7 @@ body, html {
     /* fixed nav bar to the top of page when user is scrolling */
     .nav-container {
     position: fixed; /* Fix the position of the element */
-    z-index: 1; /* Make sure the element is on top of other elements */
+     /* Make sure the element is on top of other elements */
     top: 0;
     z-index: 12;
 }
@@ -234,17 +234,24 @@ body, html {
     }   
 
     .banner-container > p{
-        text-align: center;
-        font-family: "Caudex", "Brush Script MT";
-        font-size: 60px;
-        z-index: 10;
-        font-weight: bold;
-        color: black;
-        
+      text-align: center;
+      font-family: "Caudex", "Brush Script MT";
+      font-size: 100px;
+      font-weight: bold;
+      color: black;
+      position: absolute; /* Add position absolute */
+      top: 10%; /*Position text in the middle of the banner*/
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 4;
+      
     }
 
     .banner-container{
-        z-index: 5;                /*sets the index of banner so components can overlap it and some cant */
+        z-index: 10;                /*sets the index of banner so components can overlap it and some cant */
+        position: relative;
+        height: 500px; /*adjust the height*/
+                    
         
         
     }
@@ -262,11 +269,14 @@ body, html {
     .banner {
         width: 100%;
         max-width: 100%;
-        position: absolute; /* positions the image relative to the header */
+        position:relative; /* positions the image relative to the header */
         left: 0; /* aligns the left side of the image with the left side of the header */
         right: 0;
-        z-index: -1;
+        z-index: 1;
+        
     }
+    
+    
 
 
     .animate {
@@ -285,20 +295,36 @@ body, html {
         }
       }
 
-      .grid{
-        display: flex;
-        flex-wrap: wrap;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width:100%;
-        
-      }
-      .grid-item{
-        width: 20%;
-        padding: 10px;
-
-      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
+        grid-gap: 10px;
+        justify-items: center;
+        /* position: relative; */
+        /* z-index: 15; */
+    }
+    
+    .grid-item {
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    
+    @media (min-width: 600px) {
+        .grid {
+            grid-template-columns: repeat(3, minmax(250px, 1fr));
+            grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
+        }
+    }
+    
+    @media (min-width: 900px) {
+        .grid {
+            grid-template-columns: repeat(4, minmax(250px, 1fr));
+            grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
+        }
+    }
+      
 
     /* Popup container */
     .popup {
@@ -353,6 +379,40 @@ body, html {
       from {opacity: 0;}
       to {opacity:1 ;}
     }
+
+
+    .image-description {
+      
+      
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 10px;
+
+
+      position: absolute;
+      top:0;
+      width: 80%;
+      font-size: 1.2em;
+      visibility: hidden;
+      }
+      
+
+      /* pizza name on the bottom of each image */
+    .image-name {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 10px;
+      font-size: 1.2em;
+  
+  
+      position: absolute;
+      bottom:0;
+      width: 90%;
+        
+      visibility: visible;
+    }
+
+   
     
 
     
