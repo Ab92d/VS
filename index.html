@@ -18,25 +18,24 @@
 <body>
 
     <header>
-        
+        <!-- container for logo and title-->
         <div class="logo-container">
-        
         <div class="image-container"><aside class="logo"><img src="images/logo.png" alt="logo" ></aside></div>
             <div class="title-container">
+                <!-- title -->
             <h1>&nbsp;&nbsp;It's a <h2 class="Wonderful">&nbsp;&nbsp;Wonderful </h2> <h1>&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Slice </h1></h1>
-                
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Slice </h1></h1>    
        </div>
-        
-        
     </div>
         <nav class="nav-container" id="nav-container">
             <ul class="nav" id="nav"> 
+                <li><a href="#" id="L" class="nav-link">Pizza</a></li>
                 <li><a href="#" id="L" class="nav-link">Sides</a></li>
                 <li><a href="#"  class="nav-link">Drinks</a></li>
                 <li><a href="#"  class="nav-link">Dessert</a></li>
                 <li><a href="#"  class="nav-link">Sauce</a></li>
+                <!-- button to redirct customer to the check out page -->
                 <button id="click-me" class="shoppingbasket" onclick="redirect()">
                     <img src="images/shoppingbasket.png" alt="shoppingbasketimage">
                 </button>
@@ -44,6 +43,7 @@
             
         </nav>
     </header>
+
     <!-- Primary content for the page -->
 <main>
     <div class="banner-container">
@@ -52,150 +52,280 @@
         <p>Menu</p>
         <!-- banner image -->
         
-        
+        <!-- container for all the images -->
         <div class="grid">
-            <div class="popup" onclick="myFunction()">Click me!
+            <div class="popup" onclick="showPopup()">
+                <span class="popuptext" id="myPopup">
+                    <img src="Images/pizzaClicked/american_hot_when_clicked.webp" class = "pizzaimage">
+                    <button id="close-button" >X</button>
+                    <!-- <input type="checkbox" id="small-size" >
+                    <label for="small-size">Small</label>
+                    <input type="checkbox" id="medium-size" >
+                    <label for="medium-size">Medium</label>
+                    <input type="checkbox" id="large-size" >
+                    <label for="large-size">Large</label> -->
+                </span>
                 <div class="grid-item">
-                <img src="Images/pizzaMainMenu/american_hot.webp" alt="Hot American Pie" title="Hot American Pie Pizza.">
-                <div class="image-description">Onions, pepperoni, jalapeño peppers. 233kcal, 979kJ / large slice / classic crust.</div>
-                <div class="image-name">Hot American Pie</div>
+                    <img src="Images/pizzaMainMenu/american_hot.webp" alt="Hot American Pie" title="Hot American Pie Pizza." class = "hot-american-pie" data-id="popup1">
+                    <div class="image-description">Onions, pepperoni, jalapeño peppers. 233kcal, 979kJ / large slice / classic crust.</div>
+                    <div class="image-name">Hot American Pie</div>
                 </div>
             </div>
-            <div class="popup" onclick="myFunction()">Click me!
+            <div class="popup" onclick="showPopup1()">
+                <span class="popuptext" id="myPopup1">Boo
+                    <img src="Images/pizzaClicked/american_hot_when_clicked.webp" class = "pizzaimage">
+                    <button id="close-button1" >X</button>
+                    <input type="checkbox" id="small-size" >
+                    <label for="small-size">Small</label>
+                    <input type="checkbox" id="medium-size" >
+                    <label for="medium-size">Medium</label>
+                    <input type="checkbox" id="large-size" >
+                    <label for="large-size">Large</label>
+                </span>
                 <div class="grid-item">
-                <img src="Images/pizzaMainMenu/buffalo_chicken.webp" alt="The Rooster" title="The Rooster Pizza">
+                <img src="Images/pizzaMainMenu/buffalo_chicken.webp" alt="The Rooster" title="The Rooster Pizza" class = "the-rooster" data-pizza="rooster">
                 <div class="image-description">Chicken breast strips, red onions, green & red peppers topped with 100% mozzarella cheese and drizzled with FRANK'S® RedHot® sauce. 203kcal, 852kJ / large / classic crust.</div>
                 <div class="image-name">The Rooster</div>
                 </div>
             </div>
-            <div class="popup" onclick="myFunction()">Click me!
-                <div class="grid-item">
-                <img src="Images/pizzaMainMenu/chicken_feast.webp" alt="Chicken Run" title="Chicken Run Pizza">
+            <div class="popup" onclick="showPopup2()">
+                <span class="popuptext" id="myPopup2">
+                    <img src="Images/pizzaClicked/american_hot_when_clicked.webp" class = "pizzaimage">
+                    <button id="close-button2" >X</button>
+                    <input type="checkbox" id="small-size" >
+                    <label for="small-size">Small</label>
+                    <input type="checkbox" id="medium-size" >
+                    <label for="medium-size">Medium</label>
+                    <input type="checkbox" id="large-size" >
+                    <label for="large-size">Large</label>
+                </span>
+                    <div class="grid-item">
+                <img src="Images/pizzaMainMenu/chicken_feast.webp" alt="Chicken Run" title="Chicken Run Pizza" class = "chicken-run" data-pizza="chicken-run">
                 <div class="image-description">Chicken, mushrooms, sweetcorn. 210kcal, 883kJ / large slice / classic crust.</div>
                 <div class="image-name">Chicken Run</div>
                 </div>
             </div>
-            <div class="popup" onclick="myFunction()">Click me!
-                <div class="grid-item">
-                <img src="Images/pizzaMainMenu/deluxe.webp" alt="The Great Gatsby" title="The Great Gatsby Pizza">
+            <div class="popup" onclick="showPopup3()">
+                <span class="popuptext" id="myPopup3">
+                    <img src="Images/pizzaClicked/american_hot_when_clicked.webp" class = "pizzaimage">
+                    <button id="close-button3" >X</button>
+                    <input type="checkbox" id="small-size" >
+                    <label for="small-size">Small</label>
+                    <input type="checkbox" id="medium-size" >
+                    <label for="medium-size">Medium</label>
+                    <input type="checkbox" id="large-size" >
+                    <label for="large-size">Large</label>
+                </span>
+                    <div class="grid-item">
+                <img src="Images/pizzaMainMenu/deluxe.webp" alt="The Great Gatsby" title="The Great Gatsby Pizza" class = "the-great-gatsby" id="pizza4">
                 <div class="image-description">Pepperoni, sausage, mushrooms, onions, green and red peppers. 231kcal, 969kJ / large slice / classic crust.</div>
                 <div class="image-name">The Great Gatsby</div>
                 </div>
             </div>
-            <div class="popup" onclick="myFunction()">Click me!
-                <div class="grid-item">
-                <img src="Images/pizzaMainMenu/half_and_half.webp" alt="The Half of it" title="The Half of it Pizza">
+            <div class="popup" onclick="showPopup4()">
+                <span class="popuptext" id="myPopup4">
+                    <img src="Images/pizzaClicked/american_hot_when_clicked.webp" class = "pizzaimage">
+                    <button id="close-button4" >X</button>
+                    <input type="checkbox" id="small-size" >
+                    <label for="small-size">Small</label>
+                    <input type="checkbox" id="medium-size" >
+                    <label for="medium-size">Medium</label>
+                    <input type="checkbox" id="large-size" >
+                    <label for="large-size">Large</label>
+                </span>
+                    <div class="grid-item">
+                <img src="Images/pizzaMainMenu/half_and_half.webp" alt="The Half of it" title="The Half of it Pizza" class = "the-half-of-it">
                 <div class="image-description">Pick two of your favourite flavours and create a half and half pizza. Perfect for sharing. Total calories will vary.</div>
                 <div class="image-name">The Half of it</div>
                 </div>
             </div>
-            <div class="popup" onclick="myFunction()">Click me!
-                <div class="grid-item">
-                <img src="Images/pizzaMainMenu/ham_and_pinaple.webp" alt="The Ham and Pineapple Express<" title="The Ham & Pineapple Express Pizza">
+            <div class="popup" onclick="showPopup5()">
+                
+                <span class="popuptext" id="myPopup5">
+                    <img src="Images/pizzaClicked/american_hot_when_clicked.webp" class = "pizzaimage">
+                    <button id="close-button5" >X</button>
+                    <input type="checkbox" id="small-size" >
+                    <label for="small-size">Small</label>
+                    <input type="checkbox" id="medium-size" >
+                    <label for="medium-size">Medium</label>
+                    <input type="checkbox" id="large-size" >
+                    <label for="large-size">Large</label>
+                </span>
+                        <div class="grid-item">
+                <img src="Images/pizzaMainMenu/ham_and_pinaple.webp" alt="The Ham and Pineapple Express<" title="The Ham & Pineapple Express Pizza" class = "the-ham-and-pineapple">
                 <div class="image-description">Ham, pineapple. 208kcal, 872kJ / large slice / classic crust.</div>
                 <div class="image-name">The Ham and Pineapple Express</div>
                 </div>
             </div>
-            <div class="popup" onclick="myFunction()">Click me!
-                <div class="grid-item">
-                <img src="Images/pizzaMainMenu/hot_and_spicy.webp" alt="Hot Fuzz" title="Hot Fuzz Pizza">
+            <div class="popup" onclick="showPopup6()">
+                <span class="popuptext" id="myPopup6">
+                    <img src="Images/pizzaClicked/american_hot_when_clicked.webp" class = "pizzaimage">
+                    <button id="close-button6" >X</button>
+                    <input type="checkbox" id="small-size" >
+                    <label for="small-size">Small</label>
+                    <input type="checkbox" id="medium-size" >
+                    <label for="medium-size">Medium</label>
+                    <input type="checkbox" id="large-size" >
+                    <label for="large-size">Large</label>
+
+                </span>
+                    <div class="grid-item">
+                <img src="Images/pizzaMainMenu/hot_and_spicy.webp" alt="Hot Fuzz" title="Hot Fuzz Pizza" class = "hot-fuzz">
                 <div class="image-description">Ground beef, onions, green and red peppers, jalapeño peppers. 210kcal, 880kJ / large slice / classic crust.</div>
                 <div class="image-name">Hot Fuzz</div>
                 </div>
             </div>
-            <div class="popup" onclick="myFunction()">Click me!
-                <div class="grid-item">
-                <img src="Images/pizzaMainMenu/meatball_marinara.webp" alt="Cloudy with a Chance of Marinara Meatballs" title="Cloudy with a Chance of Meatball Marinara Meatballs">
+            <div class="popup" onclick="showPopup7()">
+                <span class="popuptext" id="myPopup7">
+                    <img src="Images/pizzaClicked/american_hot_when_clicked.webp" class = "pizzaimage">
+                    <button id="close-button7" >X</button>
+                    <input type="checkbox" id="small-size" >
+                    <label for="small-size">Small</label>
+                    <input type="checkbox" id="medium-size" >
+                    <label for="medium-size">Medium</label>
+                    <input type="checkbox" id="large-size" >
+                    <label for="large-size">Large</label>
+                </span>
+                    <div class="grid-item">
+                <img src="Images/pizzaMainMenu/meatball_marinara.webp" alt="Cloudy with a Chance of Marinara Meatballs" title="Cloudy with a Chance of Meatball Marinara Meatballs" class = "meatball-marinara">
                 <div class="image-description">Meatball Marinara Extra pork meatballs, onions, herbs and mozzarella cheese, drizzled with even more of our signature tomato sauce. 249kcal, 1044kJ / large slice / classic crust.</div>
                 <div class="image-name">Cloudy with a Chance of Marinara Meatballs</div>
                 </div>
             </div>
-            <div class="popup" onclick="myFunction()">Click me!
-                <div class="grid-item">
-                <img src="Images/pizzaMainMenu/mighty_meaty.webp" alt="Sausage Party" title="Sausage Party Pizza">
+            <div class="popup" onclick="showPopup8()">
+                <span class="popuptext" id="myPopup8">
+                    <img src="Images/pizzaClicked/american_hot_when_clicked.webp" class = "pizzaimage">
+                    <button id="close-button8" >X</button>
+                    <input type="checkbox" id="small-size" >
+                    <label for="small-size">Small</label>
+                    <input type="checkbox" id="medium-size" >
+                    <label for="medium-size">Medium</label>
+                    <input type="checkbox" id="large-size" >
+                    <label for="large-size">Large</label>
+                </span>
+                    <div class="grid-item">
+                <img src="Images/pizzaMainMenu/mighty_meaty.webp" alt="Sausage Party" title="Sausage Party Pizza" class = "sausage-party">
                 <div class="image-description">Pepperoni, ham, ground beef, sausage, onions, mushrooms and mozzarella cheese. 247kcal, 1038kJ / large slice / classic crust.</div>
                 <div class="image-name">Sausage Party</div>
                 </div>
             </div>
-            <div class="popup" onclick="myFunction()">Click me!
-                <div class="grid-item">
-                <img src="Images/pizzaMainMenu/new_yorker.webp" alt="King of New York" title="King of New York Pizza">
+            <div class="popup" onclick="showPopup9()">
+                <span class="popuptext" id="myPopup9">
+                    <img src="Images/pizzaClicked/american_hot_when_clicked.webp" class = "pizzaimage">
+                    <button id="close-button9" >X</button>
+                    <input type="checkbox" id="small-size" >
+                    <label for="small-size">Small</label>
+                    <input type="checkbox" id="medium-size" >
+                    <label for="medium-size">Medium</label>
+                    <input type="checkbox" id="large-size" >
+                    <label for="large-size">Large</label>
+                </span>
+                    <div class="grid-item">
+                <img src="Images/pizzaMainMenu/new_yorker.webp" alt="King of New York" title="King of New York Pizza" class = "king-of-new-york">
                 <div class="image-description">Pepperoni, ham, bacon, mushrooms. 238kcal, 1000kJ / large slice / classic crust.</div>
                 <div class="image-name">King of New York</div>
                 </div>
             </div>
-            <div class="popup" onclick="myFunction()">Click me!
-                <div class="grid-item">
-                <img src="Images/pizzaMainMenu/pepperoni_passion.webp" alt="Jurassic Park's Prehistoric Pepperoni" title="Jurassic Park's Prehistoric Pepperoni Pizza">
+            <div class="popup" onclick="showPopup10()">
+                <span class="popuptext" id="myPopup10">
+                    <img src="Images/pizzaClicked/american_hot_when_clicked.webp" class = "pizzaimage">
+                    <button id="close-button10" >X</button>
+                    <input type="checkbox" id="small-size" >
+                    <label for="small-size">Small</label>
+                    <input type="checkbox" id="medium-size" >
+                    <label for="medium-size">Medium</label>
+                    <input type="checkbox" id="large-size" >
+                    <label for="large-size">Large</label>
+                </span>
+                    <div class="grid-item">
+                <img src="Images/pizzaMainMenu/pepperoni_passion.webp" alt="Jurassic Park's Prehistoric Pepperoni" title="Jurassic Park's Prehistoric Pepperoni Pizza" class = "pepperoni">
                 <div class="image-description">Extra pepperoni and extra mozzarella cheese on a tomato sauce base. 264kcal, 1110kJ / large slice / classic crust.</div>
                 <div class="image-name">Jurassic Park's Prehistoric Pepperoni</div>
                 </div>
             </div>
-            <div class="popup" onclick="myFunction()">Click me!
+            <div class="popup" onclick="showPopup11()">
+                <span class="popuptext" id="myPopup11">
+                    <img src="Images/pizzaClicked/american_hot_when_clicked.webp" class = "pizzaimage">
+                    <button id="close-button11" >X</button>
+                    <input type="checkbox" id="small-size" >
+                    <label for="small-size">Small</label>
+                    <input type="checkbox" id="medium-size" >
+                    <label for="medium-size">Medium</label>
+                    <input type="checkbox" id="large-size" >
+                    <label for="large-size">Large</label>
+                </span>
                 <div class="grid-item">
-                <img src="Images/pizzaMainMenu/texas_bbq.webp" alt="Kill Bill" title="Kill Bill Pizza">
+                <img src="Images/pizzaMainMenu/texas_bbq.webp" alt="Kill Bill" title="Kill Bill Pizza" class = "kill-bill"> 
                 <div class="image-description">Tangy bbq sauce topped with smoky bacon, chicken breast strips, onions, green and red peppers. 231kcal, 970kJ / large slice / classic crust.</div>
                 <div class="image-name">Kill Bill</div>
                 </div>
             </div>
-            <div class="popup" onclick="myFunction()">Click me!
-                <div class="grid-item">
-                <img src="Images/pizzaMainMenu/the_cheeseburger.webp" alt="The Cheeseburger and the King" title="The Cheeseburger and the King Pizza">
+            <div class="popup" onclick="showPopup12()">
+                <span class="popuptext" id="myPopup12">
+                    <img src="Images/pizzaClicked/american_hot_when_clicked.webp" class = "pizzaimage">
+                    <button id="close-button12" >X</button>
+                    <input type="checkbox" id="small-size" >
+                    <label for="small-size">Small</label>
+                    <input type="checkbox" id="medium-size" >
+                    <label for="medium-size">Medium</label>
+                    <input type="checkbox" id="large-size" >
+                    <label for="large-size">Large</label>
+                </span>
+                    <div class="grid-item">
+                <img src="Images/pizzaMainMenu/the_cheeseburger.webp" alt="The Cheeseburger and the King" title="The Cheeseburger and the King Pizza" class = "cheeseburger">
                 <div class="image-description">Double ground beef with fresh tomatoes, onions, sliced gherkins and drizzled with our special burger sauce. 236kcal, 992kJ / large slice / classic crust.</div>
                 <div class="image-name">The Cheeseburger and the King</div>
                 </div>
             </div>
-            <div class="popup" onclick="myFunction()">Click me!
+            <div class="popup" onclick="showPopup13()">
+                <span class="popuptext" id="myPopup13">
+                    <img src="Images/pizzaClicked/american_hot_when_clicked.webp" class = "pizzaimage">
+                    <button id="close-button13" >X</button>
+                    <input type="checkbox" id="small-size" >
+                    <label for="small-size">Small</label>
+                    <input type="checkbox" id="medium-size" >
+                    <label for="medium-size">Medium</label>
+                    <input type="checkbox" id="large-size" >
+                    <label for="large-size">Large</label>
+                </span>
                 <div class="grid-item">
-                <img src="Images/pizzaMainMenu/tuna supreme.webp" alt="The Big Fish" title="The Big Fish Pizza">
+                <img src="Images/pizzaMainMenu/tuna supreme.webp" alt="The Big Fish" title="The Big Fish Pizza" class = "the-big-fish">
                 <div class="image-description">Tuna, sweetcorn, onions. 213kcal, 894kJ / large slice / classic crust.</div>
                 <div class="image-name">The Big Fish</div>
                 </div>
             </div>
-            <div class="popup" onclick="myFunction()">Click me!
+            <div class="popup" onclick="showPopup14()">
+                <span class="popuptext" id="myPopup14">
+                    <img src="Images/pizzaClicked/american_hot_when_clicked.webp" class = "pizzaimage">
+                    <button id="close-button14" >X</button>
+                    <input type="checkbox" id="small-size" >
+                    <label for="small-size">Small</label>
+                    <input type="checkbox" id="medium-size" >
+                    <label for="medium-size">Medium</label>
+                    <input type="checkbox" id="large-size" >
+                    <label for="large-size">Large</label>
+                </span>
                 <div class="grid-item">
-                <img src="Images/pizzaMainMenu/vegi_volcano.webp" alt="The Green" title="The Green Pizza">
+                <img src="Images/pizzaMainMenu/vegi_volcano.webp" alt="The Green" title="The Green Pizza" class = "the-green">
                 <div class="image-description">Onions, green and red peppers, tomatoes, jalapeño peppers, extra mozzarella cheese. 231kcal, 971kJ / large slice / classic crust.</div>
                 <div class="image-name">The Green</div>
                 </div>
             </div>
-            
-
         </div>
-        <div class="popup" onclick="myFunction()">Click me!
-            <span class="popuptext" id="myPopup">Popup text...</span>
-          </div>
+        
     
 </div>
 </main>
 
-<h1 class = "heading">Pizza Content</h1>
-
-    <p>C
-    
-    </p>
-    <div class="image" id="image1">
-        <h2>Pepperoni</h2>
-        <img src="https://via.placeholder.com/150" alt="This needs replacing">
-        <p>Our pepperoni pizza is a classic favorite, made with a crispy crust and topped with a rich tomato 
-            sauce, shredded mozzarella cheese, and generous portions of spicy pepperoni. This pizza is perfect 
-            for those who love a traditional pizza with a little extra kick.</p>
-    </div>
-    <div class=" image" id="image2">
-        <h2>Vegi Volcano</h2>
-        <img src="https://via.placeholder.com/100" alt="this needs replacing">
-        <p>Introducing our Veggie Volcano Pizza, a taste sensation for vegetarians and meat-lovers alike. 
-            This pizza is made with a hand-tossed crust that is crispy on the outside and light on the
-             inside. </p>
-    
 
 
-</div>
+
 
 <!-- bottom part of the website -->
 <footer >
     <nav >
         <ul>
+            <li><a href="">Pizza</a></li>
             <li><a href="">Sides</a></li>
             <li><a href="">Dessert</a></li>
             <li><a href="">Drinks</a></li>
