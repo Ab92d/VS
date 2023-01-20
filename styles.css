@@ -301,20 +301,23 @@ body, html {
         grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
         grid-gap: 10px;
         justify-items: center;
-        /* position: relative; */
-        /* z-index: 15; */
-    }
+        position: relative;
+        z-index: 1;
+        
+      }
     
     .grid-item {
         width: 100%;
         height: 100%;
-        z-index: 1;
+        z-index: -1;
+        position: relative;
     }
     
     @media (min-width: 600px) {
         .grid {
             grid-template-columns: repeat(3, minmax(250px, 1fr));
             grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
+            
         }
     }
     
@@ -322,53 +325,58 @@ body, html {
         .grid {
             grid-template-columns: repeat(4, minmax(250px, 1fr));
             grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
+            
         }
     }
       
 
-    /* Popup container */
     .popup {
-      position: relative;
-      display: inline-block;
-      cursor: pointer;
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        z-index: 10;
+        /* width: 10%; */
+        
     }
-    
-    /* The actual popup (appears on top) */
     .popup .popuptext {
-      visibility: hidden;
-      width: 900px;
-      height: 900px;
-      background-color: #555;
-      color: #fff;
-      text-align: center;
-      border-radius: 6px;
-      padding: 8px 0;
-      position: absolute;
-      z-index: 4;
-      /* bottom: 125%; */
-      left: 50%;
-      
+        visibility: hidden;
+        width: 900px;
+        height: 900px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px 0;
+        position: absolute;
+        /* z-index: 4; */
+        left: 50%;
+        transform: translateX(-50%);
+        /* z-index: 10; */
+        width: 100%;
+        height: 85%;
+        
     }
-    
-    /* Popup arrow */
-    .popup .popuptext::after {
-      content: "";
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      margin-left: -5px;
-      border-width: 5px;
-      border-style: solid;
-      border-color: #555 transparent transparent transparent;
-    }
-    
-    /* Toggle this class when clicking on the popup container (hide and show the popup) */
     .popup .show {
-      visibility: visible;
-      -webkit-animation: fadeIn 1s;
-      animation: fadeIn 1s
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s; 
     }
-    
+
+    .pizzaimage {
+        width: 80%;
+        height: 40%;
+    }
+
+    .close-pop-up {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: #ddd;
+        color: #333;
+        font-size: 18px;
+        padding: 5px 10px;
+        border: none;
+    }
     /* Add animation (fade in the popup) */
     @-webkit-keyframes fadeIn {
       from {opacity: 0;}
@@ -391,7 +399,7 @@ body, html {
 
       position: absolute;
       top:0;
-      width: 80%;
+      width: 250px;
       font-size: 1.2em;
       visibility: hidden;
       }
@@ -407,7 +415,7 @@ body, html {
   
       position: absolute;
       bottom:0;
-      width: 90%;
+      width: 340px;
         
       visibility: visible;
     }
@@ -416,6 +424,9 @@ body, html {
     
 
     
+
+
+  
 
    
 
