@@ -49,7 +49,55 @@
   
       for (var i = 0; i < gridItems.length; i++) {
           gridItems[i].style.width = gridItemWidth + "%";
-      }}
+          var img = gridItems[i].querySelector("img");
+          
+          img.onmouseout = function() {
+      // Hide the description
+          this.nextElementSibling.style.visibility = "hidden";
+  }
+          img.onmouseover = function() {
+      // Show the description
+          this.nextElementSibling.style.visibility = "visible";
+  }
+          
+      }
+    }
+    function adjustGrid() {
+      var grid = document.querySelector(".grid");
+      var gridItemWidth = 100 / (grid.offsetWidth / 250);
+      var gridItems = document.querySelectorAll(".grid-item");
+      
+  
+      for (var i = 0; i < gridItems.length; i++) {
+          gridItems[i].style.width = gridItemWidth + "%";
+          var img = gridItems[i].querySelector("img");
+          
+          img.onmouseout = function() {
+      // Hide the description
+          this.nextElementSibling.style.visibility = "hidden";
+  }
+          img.onmouseover = function() {
+      // Show the description
+          this.nextElementSibling.style.visibility = "visible";
+  }
+          
+      }
+    }
+
+    function adjustDescription() {
+      var windowWidth = window.innerWidth;
+      var description = document.querySelector(".image-description");
+      if (windowWidth <= 600) {
+        description.style.fontSize = "12px";
+      } else {
+        description.style.fontSize = "initial";
+      }
+    }
+    
+    window.addEventListener("resize", adjustDescription);
+
+
+
       
   
 //  adjusts the number of images per line depeding of size of display
@@ -61,4 +109,11 @@ function myFunction() {
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
 }
+
+
+
+// might hav eto move this to the index page
+window.addEventListener("DOMContentLoaded", function(e) {
+
+});
 
